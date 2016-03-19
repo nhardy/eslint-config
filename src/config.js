@@ -3,7 +3,9 @@ export default {
   parser: require.resolve('babel-eslint'),
   rules: {
     'arrow-body-style': 0,
+    'max-len': [2, 150, 2, { ignoreTrailingComments: true }],
     'no-param-reassign': [2, { props: false }],
+    'react/jsx-closing-bracket-location': [2, 'after-props'],
   },
   globals: {
     __CLIENT__: false,
