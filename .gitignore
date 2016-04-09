@@ -32,3 +32,6 @@ build/Release
 
 # Node modules
 .tmp
+
+# dist
+dist
