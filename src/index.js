@@ -5,6 +5,7 @@ export default {
     'arrow-body-style': 0,
     'max-len': [2, 150, 2, { ignoreTrailingComments: true }],
     'no-param-reassign': [2, { props: false }],
+    'no-warning-comments': [1, { terms: ['todo', 'fixme', 'xxx', 'kludge'], location: 'anywhere' }],
     'react/jsx-closing-bracket-location': [2, 'after-props'],
   },
   globals: {
