@@ -19,5 +19,3 @@ npm-debug.log*
 # Node modules
 .tmp
 node_modules
-
-!dist

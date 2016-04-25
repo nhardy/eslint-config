@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "babel ./src --source-maps --out-dir ./dist",
-    "clean": "GLOBIGNORE=.gitignore rm -rf ./dist/*",
+    "clean": "GLOBIGNORE=.gitignore:.npmignore rm -rf ./dist/*",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags",
     "start": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run clean && babel ./src --watch --out-dir ./dist"
+    "watch": "npm run clean && babel ./src --source-maps --watch --out-dir ./dist"
   },
   "repository": {
     "type": "git",
