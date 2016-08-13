@@ -26,7 +26,8 @@ export default {
     'import/no-amd': 2,
     'import/no-commonjs': 2,
     'import/no-deprecated': 2,
-    'import/no-extraneous-dependencies': 2,
+    // KLUDGE: TODO: Separate lint config for where devDependencies are allowed
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
     'import/no-mutable-exports': 2,
     'import/no-named-as-default-member': 2,
     'import/no-restricted-paths': [2, {
