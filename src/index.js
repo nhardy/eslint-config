@@ -43,7 +43,7 @@ export default {
     'react/jsx-closing-bracket-location': [2, 'after-props'],
   },
   settings: {
-    'import/ignore': ['node_modules', '\\.(css|styl|png|jpe?g|json)$'],
+    'import/ignore': ['node_modules', '\\.(?!(?:js|jsx)$).*$'],
     'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', './', 'src'],
