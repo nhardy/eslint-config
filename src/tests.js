@@ -21,6 +21,8 @@ export default {
     'no-unused-expressions': 0,
     // Padded blocks make tests clearer
     'padded-blocks': 0,
+    // We can use devDependencies in tests
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
     'mocha/no-exclusive-tests': 2,
     'mocha/no-skipped-tests': 1,
     'mocha/no-pending-tests': 1,

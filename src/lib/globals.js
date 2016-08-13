@@ -10,6 +10,7 @@ const baseNames = [
 const testsNames = [
   'expect',
   'proxyquire',
+  'sinon',
 ];
 
 function keysToObject(keys, value) {
