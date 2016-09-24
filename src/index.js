@@ -26,8 +26,7 @@ export default {
     'import/no-amd': 2,
     'import/no-commonjs': 2,
     'import/no-deprecated': 2,
-    // KLUDGE: TODO: Separate lint config for where devDependencies are allowed
-    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    'import/no-extraneous-dependencies': 2,
     'import/no-mutable-exports': 2,
     'import/no-named-as-default-member': 2,
     'import/no-restricted-paths': [2, {
@@ -41,12 +40,16 @@ export default {
     'import/no-unresolved': [2, { commonjs: true }],
     'import/prefer-default-export': 2,
     'react/jsx-closing-bracket-location': [2, 'after-props'],
+    'react/jsx-filename-extension': 0,
+    // TODO: Make this a warning when the rule is fixed
+    'react/no-unused-prop-types': 0,
+    'jsx-a11y/anchor-has-content': 0,
   },
   settings: {
     'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
       node: {
-        moduleDirectory: ['node_modules', './', 'src'],
+        moduleDirectory: ['node_modules', 'src', 'test'],
       },
     },
   },
