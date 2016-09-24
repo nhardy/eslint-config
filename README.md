@@ -5,12 +5,20 @@ An ESLint config designed to be similar to `eslint-config-mi9`, which also exten
 
 Usage
 =====
-In your root `.eslintrc`:
+In your `src/.eslintrc`:
 ```json
 {
   "extends": "nhardy"
 }
 ```
+
+In your project folder `.eslintrc`:
+```json
+{
+  "extends": "nhardy/dev"
+}
+```
+
 
 In your `tests/.eslintrc` file:
 ```json
