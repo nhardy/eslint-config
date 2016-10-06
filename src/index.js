@@ -8,7 +8,9 @@ export default {
     browser: true,
     node: true,
   },
-  plugins: [],
+  plugins: [
+    'babel',
+  ],
   rules: {
     'arrow-body-style': 0,
     'max-len': [1, 150, 2, { ignoreTrailingComments: true }],
@@ -44,6 +46,10 @@ export default {
     // TODO: Make this a warning when the rule is fixed
     'react/no-unused-prop-types': 0,
     'jsx-a11y/anchor-has-content': 0,
+    // TODO: Remove when this is fixed
+    // @see https://github.com/airbnb/javascript/issues/948
+    'generator-star-spacing': 0,
+    'babel/generator-star-spacing': [2, { before: false, after: true }],
   },
   settings: {
     'import/extensions': ['.js', '.jsx'],
