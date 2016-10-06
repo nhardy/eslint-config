@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nhardy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An mi9-esque ESLint config which extends eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
