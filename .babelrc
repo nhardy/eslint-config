@@ -1,10 +1,12 @@
 {
   "presets": [
-    "es2015",
-    "stage-0"
+    "es2015-node",
+    "es2016",
+    "es2017",
+    "stage-0",
+    "flow"
   ],
   "plugins": [
-    "add-module-exports",
-    "syntax-object-rest-spread"
+    "add-module-exports"
   ]
 }

@@ -1,3 +1,5 @@
+// @flow
+
 import base from './index';
 import { tests as globals } from './lib/globals';
 
@@ -18,16 +20,17 @@ export default {
      * `chai` asserts on property access
      *  @see https://github.com/eslint/eslint/issues/2102
      */
-    'no-unused-expressions': 0,
+    'no-unused-expressions': 'off',
     // Padded blocks make tests clearer
-    'padded-blocks': 0,
-    // We can use devDependencies in tests
-    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
-    'mocha/no-exclusive-tests': 2,
-    'mocha/no-skipped-tests': 1,
-    'mocha/no-pending-tests': 1,
-    'mocha/handle-done-callback': 2,
-    'mocha/no-global-tests': 2,
+    'padded-blocks': 'off',
+    // Allow requiring of devDependencies
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'mocha/no-exclusive-tests': 'error',
+    'mocha/no-nested-tests': 'error',
+    'mocha/no-skipped-tests': 'warn',
+    'mocha/no-pending-tests': 'warn',
+    'mocha/handle-done-callback': 'error',
+    'mocha/no-global-tests': 'error',
   },
   globals,
 };

@@ -1,3 +1,5 @@
+// @flow
+
 import base from './index';
 
 
@@ -8,6 +10,7 @@ export default {
   },
   rules: {
     ...base.rules,
-    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    // Allow requiring of devDependencies
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };

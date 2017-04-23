@@ -1,5 +1,4 @@
-import zipObject from 'lodash/zipObject';
-
+// @flow
 
 const baseNames = [
   '__CLIENT__',
@@ -13,8 +12,11 @@ const testsNames = [
   'sinon',
 ];
 
-function keysToObject(keys, value) {
-  return zipObject(keys, keys.map(() => value));
+function keysToObject<T>(keys: string[], value: T): { [key: string]: T } {
+  return keys.reduce((acc, key) => {
+    acc[key] = value;
+    return acc;
+  }, {});
 }
 
 export default {

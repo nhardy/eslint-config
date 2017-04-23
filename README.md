@@ -5,6 +5,7 @@ An ESLint config designed to be similar to `eslint-config-mi9`, which also exten
 
 Usage
 =====
+
 In your `src/.eslintrc`:
 ```json
 {
@@ -24,5 +25,15 @@ In your `tests/.eslintrc` file:
 ```json
 {
   "extends": "nhardy/tests"
+}
+```
+
+Opt-in
+======
+
+Add to your `.eslintrc` file:
+```json
+{
+  "extends": "nhardy/withFlow"
 }
 ```
