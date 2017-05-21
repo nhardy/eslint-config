@@ -25,6 +25,16 @@ export default {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
     }],
+    'no-mixed-operators': ['error', {
+      groups: [
+        ['+', '-', '*', '/', '%', '**'],
+        ['&', '|', '^', '~', '<<', '>>', '>>>'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||'],
+        ['in', 'instanceof'],
+      ],
+      allowSamePrecedence: true,
+    }],
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
