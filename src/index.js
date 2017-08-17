@@ -50,6 +50,7 @@ export default {
         'err',
       ]
     }],
+    'no-return-assign': ['error', 'except-parens'],
     'no-underscore-dangle': 'off',
     'no-unused-expressions': ['error', {
       allowShortCircuit: true,
