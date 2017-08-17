@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nhardy",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "ESLint config similar to that used by 9Technology",
   "main": "index.js",
   "scripts": {
