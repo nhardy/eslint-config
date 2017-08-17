@@ -19,3 +19,6 @@ npm-debug.log*
 # Node modules
 .tmp
 node_modules
+
+# npm package-lock.json
+package-lock.json
