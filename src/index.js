@@ -14,6 +14,7 @@ export default {
     'babel',
   ],
   rules: {
+    'function-paren-newline': ['error', 'multiline'],
     'generator-star-spacing': ['error', {
       before: false,
       after: true,
@@ -60,6 +61,7 @@ export default {
       terms: ['todo', 'fixme', 'xxx', 'kludge'],
       location: 'anywhere',
     }],
+    'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': ['error', { js: 'never' }],
@@ -74,8 +76,7 @@ export default {
       count: 2,
     }],
     'import/no-amd': 'error',
-    // TODO: Enable when released
-    // 'import/no-anonymous-default-export': 'error',
+    'import/no-anonymous-default-export': 'error',
     'import/no-commonjs': 'error',
     'import/no-deprecated': 'error',
     'import/no-dynamic-require': 'error',
@@ -94,10 +95,22 @@ export default {
     'import/no-unresolved': ['error', { commonjs: true }],
     'import/no-webpack-loader-syntax': 'error',
     'import/prefer-default-export': 'error',
+    'jsx-a11y/anchor-has-content': ['error', { components: ['Link'] }],
+    'jsx-a11y/anchor-is-valid': ['error', {
+      components: ['Link'],
+      specialLink: ['to'],
+      'aspects': ['noHref', 'invalidHref', 'preferButton'],
+    }],
+    'jsx-a11y/label-has-for': ['error', {
+      components: ['Label'],
+      required: {
+        some: ['id', 'nesting'],
+      },
+      allowChildren: false,
+    }],
     'react/jsx-filename-extension': 'off',
     // @see https://github.com/yannickcr/eslint-plugin-react/issues/1157
-    'react/no-unused-prop-types': 'off',
-    'jsx-a11y/anchor-has-content': ['error', { components: ['Link'] }],
+    'react/no-unused-prop-types': 'error',
   },
   settings: {
     'import/extensions': ['.js', '.jsx'],
