@@ -76,7 +76,15 @@ export default {
       count: 2,
     }],
     'import/no-amd': 'error',
-    'import/no-anonymous-default-export': 'error',
+    'import/no-anonymous-default-export': ['error', {
+      allowAnonymousClass: false,
+      allowAnonymousFunction: false,
+      allowArray: true,
+      allowArrowFunction: false,
+      allowCallExpression: true,
+      allowLiteral: true,
+      allowObject: true,
+    }],
     'import/no-commonjs': 'error',
     'import/no-deprecated': 'error',
     'import/no-dynamic-require': 'error',
@@ -111,6 +119,7 @@ export default {
     'react/jsx-filename-extension': 'off',
     // @see https://github.com/yannickcr/eslint-plugin-react/issues/1157
     'react/no-unused-prop-types': 'error',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/extensions': ['.js', '.jsx'],
