@@ -24,6 +24,6 @@ module.exports = {
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'require-jsdoc': 'error',
     'import/no-cycle': 'off',
-    'import/order': ['error', { groups: [['builtin', 'external'], ['internal']] }],
+    'import/order': ['error', { groups: [['builtin', 'external'], ['internal']], 'newlines-between': 'never' }],
   },
 };
