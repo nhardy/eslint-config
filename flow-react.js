@@ -1,17 +1,15 @@
 const base = require('./react');
 
-module.exports = {
-  ...base,
+module.exports = Object.assign({}, base, {
   extends: [
     require.resolve('eslint-config-airbnb'),
     'plugin:flowtype/recommended',
   ],
-  plugins: [
-    ...base.plugins,
+  plugins: [].concat(
+    base.plugins,
     'flowtype',
-  ],
-  rules: {
-    ...base.rules,
+  ),
+  rules: Object.assign({}, base.rules, {
     'no-duplicate-imports': 'off',
     'import/no-duplicates': 'error',
     // @see https://github.com/eslint/eslint/issues/5211
@@ -34,10 +32,10 @@ module.exports = {
     'flowtype/require-valid-file-annotation': ['error', 'never', { annotationStyle: 'line' }],
     'flowtype/semi': ['error', 'always'],
     'flowtype/generic-spacing': ['error', 'never'],
-  },
+  }),
   settings: {
     flowtype: {
       onlyFilesWithFlowAnnotation: false,
     },
   },
-};
+});

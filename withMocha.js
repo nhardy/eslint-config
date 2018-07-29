@@ -1,10 +1,9 @@
 const base = require('.');
 
 module.exports = {
-  env: {
-    ...base.env,
+  env: Object.assign({}, base.env, {
     mocha: true,
-  },
+  }),
   plugins: [
     'mocha',
   ],

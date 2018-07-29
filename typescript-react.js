@@ -1,6 +1,5 @@
 const base = require('.');
 
-module.exports = {
-  ...base,
+module.exports = Object.assign({}, base, {
   extends: require.resolve('eslint-config-airbnb'),
-};
+});

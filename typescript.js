@@ -1,14 +1,12 @@
 const base = require('.');
 
-module.exports = {
-  ...base,
+module.exports = Object.assign({}, base, {
   parser: require.resolve('typescript-eslint-parser'),
-  plugins: [
-    ...base.plugins,
+  plugins: [].concat(
+    base.plugins,
     'typescript',
-  ],
-  rules: {
-    ...base.rules,
+  ),
+  rules: Object.assign({}, base.rules, {
     // Handled by the TypeScript compiler instead
     // @see https://github.com/eslint/typescript-eslint-parser/issues/414
     'no-restricted-globals': 'off',
@@ -50,7 +48,7 @@ module.exports = {
     'typescript/no-explicit-any': 'warn',
     'typescript/no-namespace': ['error', { allowDefinitionFiles: true }],
     'typescript/type-annotation-spacing': 'error',
-  },
+  }),
   settings: {
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
     'import/parsers': {
@@ -62,4 +60,4 @@ module.exports = {
       },
     },
   },
-};
+});
