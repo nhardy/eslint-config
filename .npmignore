@@ -1,24 +1,6 @@
-# Git
+.editorconfig
 .git
 .gitignore
-
-# Editorconfig
-.editorconfig
-
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
-# Node modules
-.tmp
+.vscode
 node_modules
-
-# npm package-lock.json
 package-lock.json

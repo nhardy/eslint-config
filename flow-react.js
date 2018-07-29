@@ -1,15 +1,22 @@
-// @flow
+const base = require('./react');
 
-export default {
+module.exports = {
+  ...base,
   extends: [
+    require.resolve('eslint-config-airbnb'),
     'plugin:flowtype/recommended',
   ],
   plugins: [
+    ...base.plugins,
     'flowtype',
   ],
   rules: {
+    ...base.rules,
     'no-duplicate-imports': 'off',
     'import/no-duplicates': 'error',
+    // @see https://github.com/eslint/eslint/issues/5211
+    // @see https://github.com/babel/babel-eslint/issues/366
+    'space-infix-ops': 'off',
     'react/sort-comp': ['error', {
       order: [
         'type-annotations',

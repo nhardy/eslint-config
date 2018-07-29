@@ -1,20 +1,11 @@
 {
   "name": "eslint-config-nhardy",
   "version": "0.3.5",
-  "description": "ESLint config similar to that used by 9Technology",
+  "description": "A collection of ESLint configs which extend airbnbs with some minor differences",
   "main": "index.js",
   "scripts": {
-    "build": "babel ./src --source-maps --out-dir ./dist",
-    "clean": "GLOBIGNORE=.gitignore:.npmignore rm -rf ./dist/*",
-    "flow-typed": "rm -rf ./flow-typed/* && flow-typed install --overwrite",
-    "flow": "flow",
-    "lint": "eslint ./src",
-    "lint:fix": "npm run lint -- --fix",
-    "preversion": "npm run build",
-    "postversion": "git push --follow-tags",
-    "start": "npm run clean && npm run build",
-    "test": "npm run lint:fix && npm run flow",
-    "watch": "npm run clean && babel ./src --source-maps --watch --out-dir ./dist"
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -23,10 +14,7 @@
   "keywords": [
     "eslint",
     "config",
-    "nhardy",
-    "mi9",
-    "9Digital",
-    "9Technology"
+    "nhardy"
   ],
   "author": "Nathan Hardy",
   "license": "MIT",
@@ -35,32 +23,23 @@
   },
   "homepage": "https://github.com/nhardy/eslint-config#readme",
   "dependencies": {
-    "babel-eslint": "^8.2.3",
-    "eslint-config-airbnb": "^16.1.0"
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-mocha": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "typescript": "^2.9.2",
+    "typescript-eslint-parser": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.46",
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/preset-flow": "^7.0.0-beta.46",
-    "@babel/preset-stage-0": "^7.0.0-beta.46",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "eslint": "^4.19.1",
-    "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-flowtype": "^2.46.3",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-mocha": "^5.0.0",
-    "eslint-plugin-react": "^7.8.1",
-    "flow-bin": "^0.72.0",
-    "flow-typed": "^2.4.0"
+    "eslint": "^4.19.1"
   },
   "peerDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-mocha": "^5.0.0",
-    "eslint-plugin-react": "^7.8.1"
+    "eslint": "^4.19.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }

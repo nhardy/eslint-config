@@ -1,39 +1,59 @@
 eslint-config-nhardy
 --------------------
 
-An ESLint config designed to be similar to `eslint-config-mi9`, which also extends `eslint-config-airbnb`.
+A collection of ESLint configs which extend `eslint-config-airbnb-base` with some minor differences.
 
 Usage
 =====
 
-In your `src/.eslintrc`:
+### Plain ESNext
+
+In your project folder config:
+
 ```json
 {
   "extends": "nhardy"
 }
 ```
 
-In your project folder `.eslintrc`:
+### With React
+
 ```json
 {
-  "extends": "nhardy/dev"
+  "extends": "nhardy/react"
 }
 ```
 
+### With TypeScript (experimental)
 
-In your `tests/.eslintrc` file:
 ```json
 {
-  "extends": "nhardy/tests"
+  "extends": "nhardy/typescript"
 }
 ```
 
-Opt-in
-======
+### With TypeScript and React (experimental)
 
-Add to your `.eslintrc` file:
 ```json
 {
-  "extends": "nhardy/withFlow"
+  "extends": "nhardy/typescript-react"
+}
+```
+
+### With Mocha
+
+In your `test` folder config:
+```json
+{
+  "extends": ["nhardy", "nhardy/withMocha"]
+}
+```
+
+### With React and Flow (legacy)
+
+Add to your project folder config:
+```json
+{
+  "extends": "nhardy/react-flow"
 }
 ```

@@ -1,6 +1,3 @@
 {
-	"extends": [
-    "./dev.js",
-    "./withFlow.js"
-  ]
+  "extends": "./index.js"
 }
