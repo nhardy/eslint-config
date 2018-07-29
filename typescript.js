@@ -40,7 +40,7 @@ module.exports = Object.assign({}, base, {
     'typescript/adjacent-overload-signatures': 'error',
     'typescript/class-name-casing': 'error',
     'typescript/explicit-member-accessibility': 'error',
-    'typescript/interface-name-prefix': 'error',
+    'typescript/interface-name-prefix': ['error', 'always'],
     'typescript/member-delimiter-style': ['error', { delimiter: 'semi', requireLast: true, ignoreSingleLine: true }],
     'typescript/member-ordering': 'error',
     'typescript/no-angle-bracket-type-assertion': 'error',
