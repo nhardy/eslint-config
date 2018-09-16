@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nhardy",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "A collection of ESLint configs which extend airbnbs with some minor differences",
   "main": "index.js",
   "scripts": {
