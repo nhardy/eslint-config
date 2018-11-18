@@ -1,4 +1,5 @@
 const base = require('.');
+const rules = require('./rules/mocha');
 
 module.exports = {
   env: Object.assign({}, base.env, {
@@ -7,14 +8,8 @@ module.exports = {
   plugins: [
     'mocha',
   ],
-  rules: {
+  rules: Object.assign({}, {
     // Chai asserts on property access
     'no-unused-expressions': 'off',
-    'mocha/no-exclusive-tests': 'error',
-    'mocha/no-nested-tests': 'error',
-    'mocha/no-skipped-tests': 'warn',
-    'mocha/no-pending-tests': 'warn',
-    'mocha/handle-done-callback': 'error',
-    'mocha/no-global-tests': 'error',
-  },
+  }, rules),
 };

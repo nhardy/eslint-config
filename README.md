@@ -1,7 +1,7 @@
 eslint-config-nhardy
 --------------------
 
-A collection of ESLint configs which extend `eslint-config-airbnb-base` with some minor differences.
+A collection of ESLint configs which extend `eslint-config-airbnb-base` and `eslint-config-airbnb` with some minor differences, and additions for TypeScript.
 
 Usage
 =====
@@ -24,6 +24,15 @@ In your project folder config:
 }
 ```
 
+### With Mocha
+
+In your `test` folder config:
+```json
+{
+  "extends": ["nhardy", "nhardy/withMocha"]
+}
+```
+
 ### With TypeScript (experimental)
 
 ```json
@@ -40,12 +49,12 @@ In your project folder config:
 }
 ```
 
-### With Mocha
+### With TypeScript, React and Mocha (experimental)
 
 In your `test` folder config:
 ```json
 {
-  "extends": ["nhardy", "nhardy/withMocha"]
+  "extends": "nhardy/typescript-react-mocha"
 }
 ```
 
