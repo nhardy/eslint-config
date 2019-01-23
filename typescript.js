@@ -58,7 +58,7 @@ module.exports = Object.assign({}, base, {
   settings: {
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
     'import/parsers': {
-      'typescript-eslint-parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       node: {
