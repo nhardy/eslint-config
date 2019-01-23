@@ -37,6 +37,9 @@ module.exports = Object.assign({}, base, {
         tsx: 'never',
       },
     ],
+    // Handled by the TypeScript compiler instead
+    // @see https://github.com/benmosher/eslint-plugin-import/issues/1120
+    'import/named': 'off',
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/class-name-casing': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'error',
