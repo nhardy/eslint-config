@@ -1,10 +1,10 @@
 const base = require('.');
 
 module.exports = Object.assign({}, base, {
-  parser: require.resolve('typescript-eslint-parser'),
+  parser: require.resolve('@typescript-eslint/parser'),
   plugins: [].concat(
     base.plugins,
-    'typescript',
+    '@typescript-eslint',
   ),
   rules: Object.assign({}, base.rules, {
     // Handled by the TypeScript compiler instead
@@ -12,12 +12,12 @@ module.exports = Object.assign({}, base, {
     'no-restricted-globals': 'off',
     // Handled by the TypeScript compiler instead
     'no-undef': 'off',
-    // Handled by 'typescript/no-unused-vars'
+    // Handled by '@typescript-eslint/no-unused-vars'
     'no-unused-vars': 'off',
-    'typescript/no-unused-vars': 'error',
-    // Handled by 'typescript/no-use-before-define'
+    '@typescript-eslint/no-unused-vars': 'error',
+    // Handled by '@typescript-eslint/no-use-before-define'
     'no-use-before-define': 'off',
-    'typescript/no-use-before-define': ['error', { functions: false, typedefs: false }],
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, typedefs: false }],
     // @see https://github.com/nzakas/eslint-plugin-typescript/issues/101
     'no-useless-constructor': 'off',
     // Allow TypeScipt '/// <reference />' comments
@@ -37,17 +37,20 @@ module.exports = Object.assign({}, base, {
         tsx: 'never',
       },
     ],
-    'typescript/adjacent-overload-signatures': 'error',
-    'typescript/class-name-casing': 'error',
-    'typescript/explicit-member-accessibility': 'error',
-    'typescript/interface-name-prefix': ['error', 'always'],
-    'typescript/member-delimiter-style': ['error', { delimiter: 'semi', requireLast: true, ignoreSingleLine: true }],
-    'typescript/member-ordering': 'error',
-    'typescript/no-angle-bracket-type-assertion': 'error',
-    'typescript/no-empty-interface': 'error',
-    'typescript/no-explicit-any': 'warn',
-    'typescript/no-namespace': ['error', { allowDefinitionFiles: true }],
-    'typescript/type-annotation-spacing': 'error',
+    '@typescript-eslint/adjacent-overload-signatures': 'error',
+    '@typescript-eslint/class-name-casing': 'error',
+    '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/interface-name-prefix': ['error', 'always'],
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      { delimiter: 'semi', requireLast: true, ignoreSingleLine: true },
+    ],
+    '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
+    '@typescript-eslint/no-empty-interface': 'error',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-namespace': ['error', { allowDefinitionFiles: true }],
+    '@typescript-eslint/type-annotation-spacing': 'error',
   }),
   settings: {
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],

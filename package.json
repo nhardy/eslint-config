@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/nhardy/eslint-config#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.1.0",
+    "@typescript-eslint/parser": "^1.1.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-mocha": "^5.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-typescript": "^0.14.0",
-    "typescript": "^3.2.4",
-    "typescript-eslint-parser": "^22.0.0"
+    "typescript": "^3.2.4"
   },
   "devDependencies": {
     "eslint": "^5.12.1"
