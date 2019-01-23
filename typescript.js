@@ -41,10 +41,7 @@ module.exports = Object.assign({}, base, {
     '@typescript-eslint/class-name-casing': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/interface-name-prefix': ['error', 'always'],
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      { delimiter: 'semi', requireLast: true, ignoreSingleLine: true },
-    ],
+    '@typescript-eslint/member-delimiter-style': ['error', { delimiter: 'semi', requireLast: true }],
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
     '@typescript-eslint/no-empty-interface': 'error',
