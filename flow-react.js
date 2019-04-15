@@ -8,6 +8,7 @@ module.exports = Object.assign({}, base, {
   plugins: [].concat(
     base.plugins,
     'flowtype',
+    'react-hooks',
   ),
   rules: Object.assign({}, base.rules, {
     'no-duplicate-imports': 'off',
