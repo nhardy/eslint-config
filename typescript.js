@@ -1,12 +1,17 @@
 const base = require('.');
 
+// eslint-disable-next-line prefer-object-spread
 module.exports = Object.assign({}, base, {
   parser: require.resolve('@typescript-eslint/parser'),
   plugins: [].concat(
     base.plugins,
     '@typescript-eslint',
   ),
+  // eslint-disable-next-line prefer-object-spread
   rules: Object.assign({}, base.rules, {
+    // Handled by the TypeScript compiler instead
+    // @see https://github.com/eslint/typescript-eslint-parser/issues/443
+    'no-redeclare': 'off',
     // Handled by the TypeScript compiler instead
     // @see https://github.com/eslint/typescript-eslint-parser/issues/414
     'no-restricted-globals': 'off',
@@ -18,14 +23,11 @@ module.exports = Object.assign({}, base, {
     // Handled by '@typescript-eslint/no-use-before-define'
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { functions: false, typedefs: false }],
-    // @see https://github.com/nzakas/eslint-plugin-typescript/issues/101
+    // Handled by '@typescript-eslint/no-useless-constructor'
     'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
     // Allow TypeScipt '/// <reference />' comments
     'spaced-comment': ['error', 'always', { markers: ['/'] }],
-    // @see https://github.com/eslint/eslint/issues/5211
-    // @see https://github.com/eslint/typescript-eslint-parser/issues/449
-    // @see https://github.com/nzakas/eslint-plugin-typescript/issues/85
-    'space-infix-ops': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -52,7 +54,10 @@ module.exports = Object.assign({}, base, {
       },
     ],
     '@typescript-eslint/member-ordering': 'error',
-    '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
+    '@typescript-eslint/consistent-type-assertions': [
+      'error',
+      { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' },
+    ],
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-namespace': ['error', { allowDefinitionFiles: true }],

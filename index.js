@@ -9,8 +9,23 @@ module.exports = {
   },
   plugins: [],
   rules: {
+    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
     'max-len': ['error', { code: 120, tabWidth: 2, ignoreUrls: true }],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 1 }],
+    // Override airbnb rule to allow mixing standard operations
+    // @see https://eslint.org/docs/rules/no-mixed-operators.html
+    'no-mixed-operators': [
+      'error',
+      {
+        groups: [
+          ['&', '|', '^', '~', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+          ['&&', '||'],
+          ['in', 'instanceof'],
+        ],
+        allowSamePrecedence: true,
+      },
+    ],
     'no-return-assign': ['error', 'except-parens'],
     'no-underscore-dangle': 'off',
     'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],

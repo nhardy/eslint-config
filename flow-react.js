@@ -1,5 +1,6 @@
 const base = require('./react');
 
+// eslint-disable-next-line prefer-object-spread
 module.exports = Object.assign({}, base, {
   extends: [
     require.resolve('eslint-config-airbnb'),
@@ -10,6 +11,7 @@ module.exports = Object.assign({}, base, {
     'flowtype',
     'react-hooks',
   ),
+  // eslint-disable-next-line prefer-object-spread
   rules: Object.assign({}, base.rules, {
     'no-duplicate-imports': 'off',
     'import/no-duplicates': 'error',

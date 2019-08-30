@@ -1,6 +1,9 @@
 module.exports = {
   // This rule causes issues with asynchronous code
   'react/destructuring-assignment': 'off',
+  'react/state-in-constructor': 'off',
+  'react/static-property-placement': ['error', 'static public field'],
+  'react/jsx-curly-newline': 'off',
   // Override eslint-config-airbnb default of requiring both nesting and id
   'jsx-a11y/label-has-associated-control': [
     'error',

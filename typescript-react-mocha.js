@@ -5,5 +5,6 @@ module.exports = {
   plugins: [
     'mocha',
   ],
+  // eslint-disable-next-line prefer-object-spread
   rules: Object.assign({}, rules),
 };
