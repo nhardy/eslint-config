@@ -25,22 +25,22 @@
   },
   "homepage": "https://github.com/nhardy/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-mocha": "^6.2.0",
+    "eslint-plugin-mocha": "^6.2.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
-    "typescript": "^3.7.0-beta"
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "typescript": "^3.7.1-rc"
   },
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.6.0"
   },
   "peerDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.6.0"
   },
   "engines": {
     "node": ">=8.0.0"
