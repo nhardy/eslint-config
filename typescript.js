@@ -17,6 +17,9 @@ module.exports = Object.assign({}, base, {
     'no-restricted-globals': 'off',
     // Handled by the TypeScript compiler instead
     'no-undef': 'off',
+    // Handled by @typescript-eslint/no-unused-expressions
+    'no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-expressions': 'error',
     // Handled by '@typescript-eslint/no-unused-vars'
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
