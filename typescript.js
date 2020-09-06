@@ -68,7 +68,7 @@ module.exports = Object.assign({}, base, {
       'error',
       {
         selector: 'class',
-        format: 'PascalCase',
+        format: ['PascalCase'],
       },
       {
         selector: 'interface',
