@@ -72,7 +72,7 @@ module.exports = Object.assign({}, base, {
       },
       {
         selector: 'interface',
-        prefix: 'I',
+        prefix: ['I'],
         format: ['PascalCase'],
       },
     ],
