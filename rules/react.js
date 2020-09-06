@@ -4,6 +4,7 @@ module.exports = {
   'react/state-in-constructor': 'off',
   'react/static-property-placement': ['error', 'static public field'],
   'react/jsx-curly-newline': 'off',
+  'react/require-default-props': 'off',
   // Override eslint-config-airbnb default of requiring both nesting and id
   'jsx-a11y/label-has-associated-control': [
     'error',
