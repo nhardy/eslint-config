@@ -46,7 +46,6 @@ module.exports = Object.assign({}, base, {
     // @see https://github.com/benmosher/eslint-plugin-import/issues/1120
     'import/named': 'off',
     '@typescript-eslint/adjacent-overload-signatures': 'error',
-    '@typescript-eslint/class-name-casing': 'error',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
       {
@@ -57,7 +56,6 @@ module.exports = Object.assign({}, base, {
         },
       },
     ],
-    '@typescript-eslint/interface-name-prefix': ['error', 'always'],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -66,6 +64,18 @@ module.exports = Object.assign({}, base, {
       },
     ],
     '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'class',
+        format: 'PascalCase',
+      },
+      {
+        selector: 'interface',
+        prefix: 'I',
+        format: ['PascalCase'],
+      },
+    ],
     '@typescript-eslint/consistent-type-assertions': [
       'error',
       { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' },
